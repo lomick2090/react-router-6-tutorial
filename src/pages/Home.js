@@ -1,8 +1,16 @@
+
+
+
 const Home = () => {
   return (
-    <section className='section'>
+    <div className='section'>
       <h2>Home Page</h2>
-    </section>
+      <br />
+      <img 
+        src='https://www.wordstream.com/wp-content/uploads/2021/07/product-photography-rule-of-thirds-final.jpg' 
+        style={{width:'40vw'}}
+      />
+    </div>
   );
 };
 export default Home;

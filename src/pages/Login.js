@@ -1,10 +1,18 @@
 import { useState } from 'react';
-const Login = () => {
+import { useNavigate } from 'react-router-dom'
+const Login = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!name || !email) {
+      alert('Please fill both fields')
+    } else {
+      props.setUser({name, email})
+      navigate('/dashboard')
+    }
   };
 
   return (
